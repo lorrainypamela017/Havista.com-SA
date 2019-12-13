@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+   <link rel="icon" type="image/png" href="img/logo.png"> <title>Havista.com </title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="estilo.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            padding-top: 30px;
+        }
+        @font-face{
+        font-family:fonte;
+        src:url(css/RW-creepsville.ttf);
+        }
+        h2{
+          font-family:fonte;
+          font-size:45px;
+          color: #000000;
+        }
+        h1{
+            font-family:fonte;
+            font-size:65px;
+            color:#000000;
+        }
+        p{
+            font-family:fonte;
+            font-size:20px;
+             color:#000000;
+        }
+       
+        
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="modal" tabindex="-1" id="modalExemplo" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><b>FORMAS DE PAGAMENTO!</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <center>
+                
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio1"><b>Crédito</b></label>
+                                    </div>
+                                </td>
+                                <td> <img src="img/credito.png" class="cred"> </td><br>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio2"><b>Débito</b></label>
+                                    </div>
+                                </td>
+                                <td> <img src="img/deb.png"> </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio3"><b>Boleto</b></label>
+                                    </div>
+                                </td>
+                                <td> <img src="img/boleto.png" class="boleto"> </td>
+                    
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Finalizar</button>
+                    </div>
+                </center>
+                </div>
+            </div>
+        </div>
+    
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-danger static-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" class="logo" alt="35px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">LOJA
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                   
+            </div>
+        </div>
+    </nav>
+   
+    <center>
+        <h1 class="my-4"><br> HAVISTA.COM</h1>
+        <hr>
+    </center>
+    <div class="container menu text-justify">
+        <h3><b>Feminino</b></h3><br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="img/img1.jpg" class="img1" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">CH Privée </h5>
+                    <p class="card-text">CH Privée Carolina Herrera Edp - Perfume Feminino 80ml.</p>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="" >R$386,46<br><input type="number" id='pan' onclick="quanti1()">
+                            <p id="total1"></p></big>
+                        </center>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img2.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">La Nuit Trésor </h5>
+                    <p class="card-text">Perfume Feminino Lancôme La Nuit Trésor - Eau de Parfum 50ml - Mil Perfumes</p>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$229,90<br><input type="number" id='coel' onclick="quanti2()">
+                            <p id="total2"></big>
+                            </center>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img3.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">La Vie Est</h5>
+                    <p class="card-text">La Vie Est Belle Lancôme Eau de Parfum - Perfume Feminino 100ml</p>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$80,00<br><input type="number" id='fre' onclick="quanti3()">
+                            <p id="total3"></big>
+                    </center>
+                </div>
+            </div>
+        </div><br>
+        <h3><b>Masculino</b></h3><br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="img/img4.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Ralph Lauren Polo</h5>
+                    <p class="card-text">Perfume Masculino Ralph Lauren Polo Ultra Blue EDT 125ml.</p>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$409,90<br><input type="number" id='incr' onclick="quanti4()">
+                            <p id="total4"></p>
+                        </big>
+                    </center>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img5.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Dolce Gabbana</h5>
+                    <p class="card-text">Light Blue Eau Intense Dolce Gabbana Perfume Masculino 100ml.</p>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$407,93<br><input type="number" id='med' onclick="quanti5()">
+                            <p id="total5">
+                            </big>
+                        </center>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img6.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Hugo Boss </h5>
+                    <p class="card-text">Perfume Masculino Bottled Tonic Hugo Boss Eau de Toilette - 100ml</p>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$470,00<br><input type="number" id='ter' onclick="quanti6()">
+                            <p id="total6">
+                            </big>
+                    </center>
+                </div>
+            </div>
+        </div><br>
+        <h3><b>Kits Pormocionais!</b></h3><br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="img/img7.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Kit Versace Eros Pour </h5>
+                    <p class="card-text">Kit Versace Eros Pour Perfume Feminino 100ML + Body Lotion 100ML + Chaveiro - Perfume Feminino</p>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$ 499,99<br><input type="number" id='papel' onclick="quanti7()">
+                            <p id="total7">
+                            </big>
+                        </center>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img9.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title"> Kit La Rive</h5>
+                    <p class="card-text">Kit Perfume Importado Masculino E Feminino La Rive</p>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$520,00<br><input type="number" id='pol' onclick="quanti8()">
+                            <p id="total8">
+                            </big>
+                        </center> 
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/img8.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Kit VIP Men CH</h5>
+                    <p class="card-text">Kit VIP Men Carolina Herrera Eau de Toilette - Perfume Masculino 100 ML + Gel</p>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$ 370,49<br><input type="number" id='palha' onclick="quanti9()">
+                            <p id="total9">
+                            </big>
+                        </center>
+                </div>
+            </div>
+        </div><br>
+        <div class="jumbotron">
+              <div  class="row">
+                  <div class="col-sm">
+                      <button type="button" class="btn btn-danger btn-lg col-8 " onclick="calculartotal()">Calcular Compra</button>
+                      </div>
+                    <div class="col-sm" class="total">
+                       <b><p id="totalfinal"></p></b>
+                    </div>
+
+             </div> <br>
+             <center><button type="button" class="btn btn-primary btn-lg btn-block " data-toggle="modal" data-target="#modalExemplo">Efetuar
+                pagamento</buton></center>
+        </div>
+    </div>
+    
+    <!-- RODAPE -->
+    <footer class="page-footer fixed bg-danger ">
+        <div class="container">
+            <hr class="bg-hex" style="margin: 0 15%;">
+            <div class="row d-flex text-center justify-content-center  mb-md-0 mb-4 ">
+                <div class="col-md-8 col-12 mt-5">
+                    <p style="line-height: 1.7rem; color: white;">Web Designer Lorrainy Siqueira <br>Contato:
+                        (31)98591-7502<br>E-mail: lorrainypamela99@gmail.com</p>
+                </div>
+            </div>
+            <hr class="clearfix d-md-none bg-white " style="margin: 10% 15% 5%;">
+            <div class="row pb-3">
+            </div>
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3" style="color: white;">© 2019 Copyright: Bootstrap<br>
+            </div>
+            <br>
+            <!-- Copyright -->
+    </footer>
+    <script src="quantidade.js"></script>
+</body>
+</html>
